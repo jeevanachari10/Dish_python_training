@@ -3,5 +3,5 @@ input_string = input("Enter a string:")
 num_times = int(input("Enter the number of times the portion string should disply:"))
 
 portion = len(input_string) // num_times
-for i in range(n):
+for i in range(num_times):
   print(input_string[:portion])
