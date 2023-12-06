@@ -44,3 +44,21 @@ for i in mytuple:
 #using range() and len()
 for i in range(len(mytuple)):
 	print(mytuple[i])
+
+#Nested tuple example
+# Creating a nested tuple
+nested_tuple = (
+    (1, 2, 3),
+    ('a', 'b', 'c'),
+    (True, False, True)
+)
+
+# Accessing elements in the nested tuple
+print("Nested Tuple:")
+for inner_tuple in nested_tuple:
+    for element in inner_tuple:
+        print(element, end=' ')
+    print()
+
+# Accessing a specific element in the nested tuple
+print("\nAccessing a specific element:", nested_tuple[1][2])
