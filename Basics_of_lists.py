@@ -121,3 +121,22 @@ remove()	-->	Removes the item with the specified value
 reverse()	-->	Reverses the order of the list
 sort()		-->	Sorts the list
 '''
+#Nested list example
+# Creating a nested list
+nested_list = [[1, 2, 3], ['a', 'b', 'c'],[True, False, True]]
+
+# Accessing elements in the nested list
+for inner_list in nested_list:
+    for element in inner_list:
+        print(element, end=' ')
+    print()
+
+# Modifying an element in the nested list
+nested_list[1][0] = 'x'
+
+# Displaying the modified nested list
+print("\n")
+for inner_list in nested_list:
+    for element in inner_list:
+        print(element, end=' ')
+    print()
