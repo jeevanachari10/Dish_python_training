@@ -1,3 +1,4 @@
+#Find palindrome of a string.
 def is_palindrome(s):
     s = ''.join(e.lower() for e in s if e.isalnum())  #to get more accureate results few filters applied
     return s == s[::-1]
