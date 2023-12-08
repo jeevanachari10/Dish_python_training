@@ -140,3 +140,23 @@ for inner_list in nested_list:
     for element in inner_list:
         print(element, end=' ')
     print()
+#----------------------------------------------------------
+num_students = int(input("Enter the number of students:"))
+students_score_list = []
+for i in range(num_students):
+    name = input("Enter student name:")
+    score = float(input("Enter student score:"))
+    students_score_list.append([name, score])
+#print(students_score_list)
+total = 0
+for name, score in students_score_list:
+    total +=score
+print(total)
+
+#total2 = sum([score for name, score in students_score_list])
+total2 = sum(score[1] for score in students_score_list)
+print(total2)
+
+#sorted_list = students_score_list.sort()
+sorted_list = sorted(students_score_list, key = lambda x:x[1])
+print(sorted_list)
