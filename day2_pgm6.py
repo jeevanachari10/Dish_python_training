@@ -1,4 +1,26 @@
 #Write a python program to retrieve string which is repeated for more than once in the Paragraph. And store the resultant string to list.
+#--------------------------------Logic1-----------------------------------------------
+#import re
+mystring = "This is an example for the checking repeating words. We check the repeated words in this sentence. We will store the repeated words in a list"
+
+delimiters = ".,;:-!"
+words = mystring.translate(str.maketrans('', '', delimiters))
+words = words.lower()
+#words = re.sub(r'[^\w\s]', '', mystring.lower())
+#words = re.sub(r'\b\w+\b', '', mystring.lower())
+print(words)
+mystring_list = words.split()
+print(mystring_list)
+seen_words = set()
+repeated_words = set()
+for word in mystring_list:
+    if word in seen_words:
+        repeated_words.add(word)
+    else:
+        seen_words.add(word)
+
+print(list(repeated_words))
+#------------------------------------------------logic2----------------------------------------------
 from collections import Counter
 import re
 
